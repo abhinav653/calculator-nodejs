@@ -14,7 +14,7 @@ node {
     stage('Containerization') {
         steps {
             script {
-                docker.build("your-docker-image-name:latest")
+                docker.build("abhinav653/calculator-app:1.0")
             }
         }
     }
