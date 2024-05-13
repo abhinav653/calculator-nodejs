@@ -1,18 +1,20 @@
-node {
-  stages {
-    stage('Build') {
+pipeline{
+   agent any
+
+   stages {
+     stage('Build') {
         steps {
             sh 'npm install'
         }
     }
 
-    stage('Test') {
+     stage('Test') {
         steps {
             sh 'npm test'
         }
     }
 
-    stage('Containerization') {
+     stage('Containerization') {
         steps {
             script {
                 docker.build("abhinav653/calculator-app:1.0")
