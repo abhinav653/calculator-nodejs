@@ -1,4 +1,5 @@
 node {
+  stages {
     stage('Build') {
         steps {
             sh 'npm install'
@@ -27,5 +28,7 @@ node {
             echo 'Pipeline failed!'
         }
     }
+
+  }
 }
 
